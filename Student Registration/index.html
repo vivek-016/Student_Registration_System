@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vivek">
+    <meta name="description" content="We are registrating and updating student's details">
+    <meta name="keywords" content="HTML CSS JavaScript Student Registration">
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slabo+13px&family=Slabo+27px&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Student's Registration</title>
+</head>
+<body>
+    <!-- creating a header -->
+    <header>
+        <h1>Student Registration Platform</h1>
+        <p>This page is designed for student registration. It takes the details of the students and add them to the storage. <br>We can also see the details stored in the display section where we can either make changes or delete them from the storage.</p>
+    </header>
+    <main>
+        <!-- section for registration -->
+        <section class="details">
+            <!-- container for styling purposes -->
+            <div class="form_container">
+                <!-- heading for the form -->
+                <h2>Enter your details</h2>
+                <form id="studentRegistration">
+                    <div class="input">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" placeholder="Enter your name" id="studentName" name="studentName">
+                    </div>
+                    <div class="input">
+                        <label for="studentId">Student Id</label>
+                        <input type="number" placeholder="Enter your student Id" id="studentId" name="studentId">
+                    </div>
+                    <div class="input">
+                        <label for="mailId">Email Id</label>
+                        <input type="email" placeholder="Enter your mail Id" id="mailId" name="mailId">
+                    </div>
+                    <div class="input">
+                        <label for="phNumber">Contact number</label>
+                        <input type="number" placeholder="Enter your contact number" id="phNumber" name="phNumber">
+                    </div>
+                    <div class="input">
+                        <label for="classId">Class</label>
+                        <input type="number" placeholder="Enter your class" id="classId" name="classId">
+                    </div>
+                    <div class="btns">
+                        <a href="#display-details" id="registration_btn" class="btn">Add</a> 
+                        <a href="#display-details" id="nav-btn" class="btn">Data</a> 
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Another section for displaying the details -->
+        <section class="display" id="display-details">
+            <!-- container for styling -->
+            <div class="display_container">
+                <!-- heading for the details -->
+                <h2>Student details</h2>
+                <!-- We have just created a table as the details will be created dynamically -->
+                <div class="table-container">
+                    <table id="studentInfo">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Id</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Class</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="displayList">
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+</body>
+</html>
